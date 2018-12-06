@@ -1820,6 +1820,17 @@ function func(){
 x=document.getElementById("a_znach").value;
 n=(x-x%10)/10+(x%10)*100
 document.getElementById("a").innerHTML =open+ n+close;
+document.getElementById("b").innerHTML ="<open>"+"2.27= "+ n+"</close>";
+n=(n%100-n%10)*100+((n-n%100*10)+n%10)
+document.getElementById("c").innerHTML ="<open>"+"2.29= "+ n+"</close>";
+x=((y-y%100)/10+y%10)
+n=(y%100-y%10)*10+x
+document.getElementById("d").innerHTML ="<open>"+"2.31= "+ n+"</close>";
+x=y%10
+a=(y%100-x)+(y-y%100)/100
+n=100*x+a
+document.getElementById("e").innerHTML ="<open>"+"2.33= "+ n+"</close>";
+}	
 }
 </script>
 n=<input type="text" value="0" id="a_znach">
@@ -1832,4 +1843,8 @@ n=<input type="text" value="0" id="a_znach">
 <br>
 <br>
 <div id="a"></div>
+<div id="b"></div>
+<div id="c"></div>
+<div id="d"></div>
+<div id="e"></div>	
 </body></html>
