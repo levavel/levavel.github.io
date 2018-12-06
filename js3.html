@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="styletext.css">
+    <script src="script.js"></script>
+    <script>
+function func(){
+x=document.getElementById("a_znach").value;
+n=(x-x%10)/10+(x%10)*100
+document.getElementById("a").innerHTML ="<section class="p6">"+"2.25= "+ n+"</section>";
+
+}
+</script>
+  </head>
+  <body>
+<br>
+<br>
+n=<input type="text" value="0" id="a_znach">
+<br>
+<br>
+<button onclick="func()">Надо нажать</button>
+<br>
+<br>
+<div id="a"></div>
+  </body>
+</html>
