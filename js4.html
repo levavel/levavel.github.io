@@ -9,8 +9,9 @@ open='<section class="p6"> <a href="#">'
 close='</a></section>'
 x=document.getElementById("a_znach").value;
 n=(x-x%10)/10+(x%10)*100;
-document.getElementById("val").innerHTML =n;
-
+document.getElementById("a").innerHTML =n;
+n=(x-x%100)/100+(x%100*10)
+document.getElementById("b").innerHTML =n;
 }	
 
 </script>
@@ -27,7 +28,9 @@ document.getElementById("val").innerHTML =n;
 <br>
 <br>
 <section class="apresenteichan">
-  <a href="#" id="val">    </a>
+  <a href="#" id="a">    </a>
+ <br>
+  <a href="#" id="b">    </a>
 </section>
 </body>
 </html>
