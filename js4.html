@@ -12,7 +12,14 @@ n=(x-x%10)/10+(x%10)*100;
 document.getElementById("a").innerHTML =n;
 n=(x-x%100)/100+(x%100*10)
 document.getElementById("b").innerHTML =n;
+n=(n%100-n%10)*100+((n-n%100*10)+n%10)
+document.getElementById("c").innerHTML = n;
+n=(n%100-n%10)+(n-((n%100-n%10)*10)+n%10)
+document.getElementById("d").innerHTML = n;
+n=(n%10)*100+((n-n%10)/10)
+document.getElementById("e").innerHTML =n;
 }	
+  
 
 </script>
   </head>
@@ -35,5 +42,17 @@ document.getElementById("b").innerHTML =n;
  <br>
   <a href="#" id="b">    </a>
 </section>
-</body>
+<section class="apresenteichan">
+  <a href="#" id="c">    </a>
+ <br>
+</section>
+<section class="apresenteichan">
+ <br>
+  <a href="#" id="d">    </a>
+</section>
+  <section class="apresenteichan">
+ <br>
+  <a href="#" id="e">    </a>
+</section>
+  </body>
 </html>
