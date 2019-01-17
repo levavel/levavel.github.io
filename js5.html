@@ -5,24 +5,24 @@
 	function er1(){
 var canvas = document.getElementById('example1');
 var ctx = canvas.getContext('2d');
-ctx.fillStyle = 'green';
 ctx.beginPath();
 ctx.moveTo(320, 0);
 ctx.lineTo(320, 480);
 ctx.moveTo(0, 240);
 ctx.lineTo(640, 240);
+ctx.fillStyle = 'green';
 ctx.stroke();
 ctx.strokeRect(0, 0, 300, 230);
 }
 		function er2(){
 	var canvas = document.getElementById('example2');
 var ctx = canvas.getContext('2d');
-ctx.fillStyle = 'green';
 ctx.beginPath();
 ctx.moveTo(320, 0);
 ctx.lineTo(320, 480);
 ctx.moveTo(0, 240);
 ctx.lineTo(640, 240); 
+ctx.fillStyle = 'green';
 ctx.stroke();
 ctx.strokeRect(0, 225, 640, 35);
 }
@@ -30,12 +30,12 @@ ctx.strokeRect(0, 225, 640, 35);
 	function er3(){
 	var canvas = document.getElementById('example3');
 var ctx = canvas.getContext('2d');
-ctx.fillStyle = 'green';
 ctx.beginPath();
 ctx.moveTo(320, 0);
 ctx.lineTo(320, 480);
 ctx.moveTo(0, 240);
 ctx.lineTo(640, 240);
+ctx.fillStyle = 'green';
 ctx.stroke();
 ctx.strokeRect(330, 200, 10, 250);
 }
@@ -43,12 +43,12 @@ ctx.strokeRect(330, 200, 10, 250);
 	function er4(){
 	var canvas = document.getElementById('example4');
 var ctx = canvas.getContext('2d');
-ctx.fillStyle = 'green';
 ctx.beginPath();
 ctx.moveTo(320, 0);
 ctx.lineTo(320, 480);
 ctx.moveTo(0, 240);
 ctx.lineTo(640, 240);
+ctx.fillStyle = 'green';
 ctx.stroke();
 ctx.strokeRect(330, 200, 200, 20);
 
@@ -57,7 +57,6 @@ ctx.strokeRect(330, 200, 200, 20);
 	function er5(){
 	var canvas = document.getElementById('example5');
 var ctx = canvas.getContext('2d');
-ctx.fillStyle = 'green';
 ctx.beginPath();
 ctx.moveTo(320, 0);
 ctx.lineTo(320, 480);
@@ -112,7 +111,7 @@ ctx.stroke();
 
 
 ctx.rect(40, 225, 300, 10);
-ctx.fillStyle = 'orange';
+ctx.fillStyle = 'green';
 ctx.fill();
 ctx.rect(340, 50, 100, 400);
 ctx.fillStyle = 'green';
