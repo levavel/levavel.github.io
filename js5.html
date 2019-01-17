@@ -1,61 +1,66 @@
-<head>
-		<title>3.32</title>
+<html>
+	<head>
+		<title>canvasExample</title>
         <meta charset='utf-8' />
+		<style>
+		a.button.purple {
+    background: #e8c4e4;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#e8c4e4), to(#d698d0));
+    background: -moz-linear-gradient(#e8c4e4, #d698d0);
+    background: linear-gradient(#e8c4e4, #d698d0);
+    border: solid 1px #da9fd4;
+    border-bottom: solid 3px #946890;
+    box-shadow: inset 0 0 0 1px #f2dcef;
+    color: #7b5777;
+    text-shadow: 0 1px 0 #eacae6; }
+    
+a.button.purple:hover {
+    background: #daa2d4;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#daa2d4), to(#e0b1db));
+    background: -moz-linear-gradient(#daa2d4, #e0b1db);
+    background: linear-gradient(#daa2d4, #e0b1db);
+    border: solid 1px #ca91c4;
+    border-bottom: solid 3px #946890;
+    box-shadow: inset 0 0 0 1px #e9c7e6; }
+    
+a.button.purple:active {
+    background: #d49ace;
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#d49ace), to(#cc94c6));
+    background: -moz-linear-gradient(#d49ace, #cc94c6);
+    background: linear-gradient(#d49ace, #cc94c6);
+    border: solid 1px #8e678a;
+    box-shadow: inset 0 10px 15px 0 #ba87b5; }
+</style>
         		<script>
-	function er1(){
-var canvas = document.getElementById('example1');
+function clean(){
+var canvas = document.getElementById('example');
+var ctx = canvas.getContext('2d');
+ctx.fillStyle = "white";
+ctx.fillRect(0, 0, 640, 480);
+
+}
+
+		function er1(){
+var canvas = document.getElementById('example');
 var ctx = canvas.getContext('2d');
 ctx.beginPath();
 ctx.moveTo(320, 0);
 ctx.lineTo(320, 480);
 ctx.moveTo(0, 240);
 ctx.lineTo(640, 240);
-ctx.fillStyle = 'green';
+
+ctx.moveTo(300, 230);
+ctx.lineTo(300, 0);
+ctx.moveTo(300, 230);
+ctx.lineTo(0, 230);
 ctx.stroke();
-ctx.strokeRect(0, 0, 300, 230);
+ctx.rect(0, 0, 300, 230);
+ctx.fillStyle = 'green';
+ctx.fill();
+
 }
 		function er2(){
-	var canvas = document.getElementById('example2');
-var ctx = canvas.getContext('2d');
-ctx.beginPath();
-ctx.moveTo(320, 0);
-ctx.lineTo(320, 480);
-ctx.moveTo(0, 240);
-ctx.lineTo(640, 240); 
-ctx.fillStyle = 'green';
-ctx.stroke();
-ctx.strokeRect(0, 225, 640, 35);
-}
-
-	function er3(){
-	var canvas = document.getElementById('example3');
-var ctx = canvas.getContext('2d');
-ctx.beginPath();
-ctx.moveTo(320, 0);
-ctx.lineTo(320, 480);
-ctx.moveTo(0, 240);
-ctx.lineTo(640, 240);
-ctx.fillStyle = 'green';
-ctx.stroke();
-ctx.strokeRect(330, 200, 10, 250);
-}
-
-	function er4(){
-	var canvas = document.getElementById('example4');
-var ctx = canvas.getContext('2d');
-ctx.beginPath();
-ctx.moveTo(320, 0);
-ctx.lineTo(320, 480);
-ctx.moveTo(0, 240);
-ctx.lineTo(640, 240);
-ctx.fillStyle = 'green';
-ctx.stroke();
-ctx.strokeRect(330, 200, 200, 20);
-
-}
-
-	function er5(){
-	var canvas = document.getElementById('example5');
+	var canvas = document.getElementById('example');
 var ctx = canvas.getContext('2d');
 ctx.beginPath();
 ctx.moveTo(320, 0);
@@ -63,101 +68,113 @@ ctx.lineTo(320, 480);
 ctx.moveTo(0, 240);
 ctx.lineTo(640, 240);
 ctx.stroke();
-ctx.strokeRect(340, 20, 300, 220);
-ctx.strokeRect(330, 250, 200, 200);
-}
-	
-		function er6(){
-	var canvas = document.getElementById('example6');
-var ctx = canvas.getContext('2d');
-ctx.fillStyle = 'green';
-ctx.beginPath();
-ctx.moveTo(320, 0);
-ctx.lineTo(320, 480);
-ctx.moveTo(0, 240);
-ctx.lineTo(640, 240);
-ctx.stroke();
-ctx.strokeRect(340, 0, 400, 230);
-ctx.strokeRect(340, 255, 400, 180);
-
-}
-	
-		function er7(){
-	var canvas = document.getElementById('example7');
-var ctx = canvas.getContext('2d');
-ctx.fillStyle = 'green';
-ctx.beginPath();
-ctx.moveTo(320, 0);
-ctx.lineTo(320, 480);
-ctx.moveTo(0, 240);
-ctx.lineTo(640, 240);
-ctx.stroke();
-ctx.strokeRect(330, 250, 20, 10);
-
-
-
-}
-	
-		function er8(){
-	var canvas = document.getElementById('example8');
-var ctx = canvas.getContext('2d');
-ctx.fillStyle = 'green';
-ctx.beginPath();
-ctx.moveTo(320, 0);
-ctx.lineTo(320, 480);
-ctx.moveTo(0, 240);
-ctx.lineTo(640, 240);
-ctx.stroke();
-
-
-ctx.rect(40, 225, 300, 10);
+ctx.rect(0, 225, 640, 35);
 ctx.fillStyle = 'green';
 ctx.fill();
-ctx.rect(340, 50, 100, 400);
+
+}
+		function er3(){
+	var canvas = document.getElementById('example');
+var ctx = canvas.getContext('2d');
+ctx.beginPath();
+ctx.moveTo(320, 0);
+ctx.lineTo(320, 480);
+ctx.moveTo(0, 240);
+ctx.lineTo(640, 240);
+ctx.stroke();
+ctx.rect(330, 200, 10, 250);
+ctx.fillStyle = 'green';
+ctx.fill();
+
+}
+		function er4(){
+	var canvas = document.getElementById('example');
+var ctx = canvas.getContext('2d');
+ctx.beginPath();
+ctx.moveTo(320, 0);
+ctx.lineTo(320, 480);
+ctx.moveTo(0, 240);
+ctx.lineTo(640, 240);
+ctx.stroke();
+ctx.rect(330, 200, 200, 20);
+ctx.fillStyle = 'green';
+ctx.fill();
+
+}
+    function er5(){
+	var canvas = document.getElementById('example');
+var ctx = canvas.getContext('2d');
+ctx.beginPath();
+ctx.moveTo(320, 0);
+ctx.lineTo(320, 480);
+ctx.moveTo(0, 240);
+ctx.lineTo(640, 240);
+ctx.stroke();
+ctx.rect(330, 250, 300, 240);
 ctx.fillStyle = 'green';
 ctx.fill();
 }
-	function clean(){ 
-var canvas = document.getElementById('example1'); 
-var ctx = canvas.getContext('2d'); 
-ctx.fillStyle = "green"; 
-ctx.fillRect(0, 0, 640, 480); 
-ctx.closePath(); 
-var canvas = document.getElementById('example2'); 
-var ctx = canvas.getContext('2d'); 
-ctx.fillStyle = "green"; 
-ctx.fillRect(0, 0, 640, 480); 
-ctx.closePath(); 
-} 
-	
+    function er6(){
+	var canvas = document.getElementById('example');
+var ctx = canvas.getContext('2d');
+ctx.beginPath();
+ctx.moveTo(320, 0);
+ctx.lineTo(320, 480);
+ctx.moveTo(0, 240);
+ctx.lineTo(640, 240);
+ctx.stroke();
+ctx.rect(340, 0, 300, 230);
+ctx.fillStyle = 'green';
+ctx.fill();
+ctx.rect(340, 255, 300, 225);
+ctx.fillStyle = 'green';
+ctx.fill();
+}
+	  function er7(){
+	var canvas = document.getElementById('example');
+var ctx = canvas.getContext('2d');
+ctx.beginPath();
+ctx.moveTo(320, 0);
+ctx.lineTo(320, 480);
+ctx.moveTo(0, 240);
+ctx.lineTo(640, 240);
+ctx.stroke();
+ctx.rect(330,250, 20, 10);
+ctx.fillStyle = 'green';
+ctx.fill();
+
+}
+	  function er8(){
+	var canvas = document.getElementById('example');
+var ctx = canvas.getContext('2d');
+ctx.beginPath();
+ctx.moveTo(320, 0);
+ctx.lineTo(320, 480);
+ctx.moveTo(0, 240);
+ctx.lineTo(640, 240);
+ctx.stroke();
+ctx.rect(0, 225, 640, 10);
+ctx.fillStyle = 'green';
+ctx.fill();
+ctx.rect(340, 0, 300,480);
+ctx.fillStyle = 'green';
+ctx.fill();
+}
 		</script>
 	</head>
 	<body>
- <button onclick="er1()">3.32а</button>
-<button onclick="er2()">3.32б</button>
-<button onclick="er3()">3.32в</button>
-<button onclick="er4()">3.32г</button>
-<button onclick="er5()">3.32д</button>
-<button onclick="er6()">3.32е</button>
-<button onclick="er7()">3.32ж</button>
-<button onclick="er8()">3.32з</button>
-<button onclick="clean()">тру</button>
+<a href="#" onclick="clean()" class="button purple">Очистить</a>
+<a href="#" onclick="er1()" class="button purple">3.31а</a>
+<a href="#" onclick="er2()" class="button purple">3.31б</a>
+<a href="#" onclick="er3()" class="button purple">3.31в</a>
+<a href="#" onclick="er4()" class="button purple">3.31г</a>
+<a href="#" onclick="er5()" class="button purple">3.31д</a>
+<a href="#" onclick="er6()" class="button purple">3.31е</a>
+<a href="#" onclick="er7()" class="button purple">3.31ж</a>
+<a href="#" onclick="er8()" class="button purple">3.31з</a>
+
 <br>
-	<canvas width='640' height='480' id='example1'>Обновите браузер</canvas>
+	<canvas width='640' height='480' id='example'>Обновите браузер</canvas>
 	<br>
-	<canvas width='640' height='480' id='example2'>Обновите браузер</canvas>
-	<br>
-	<canvas width='640' height='480' id='example3'>Обновите браузер</canvas>
-	<br>
-	<canvas width='640' height='480' id='example4'>Обновите браузер</canvas>
-	<br>
-	<canvas width='640' height='480' id='example5'>Обновите браузер</canvas>
-	<br>
-	<canvas width='640' height='480' id='example6'>Обновите браузер</canvas>
-	<br>
-	<canvas width='640' height='480' id='example7'>Обновите браузер</canvas>
-	<br>
-	<canvas width='640' height='480' id='example8'>Обновите браузер</canvas>
-	<br>
-	</body>
+	
 </html>
