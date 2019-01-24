@@ -40,7 +40,7 @@ ctx.fillRect(0, 0, 640, 480);
 
 }
 
-		function er1(){
+function er1(){
 var canvas = document.getElementById('example');
 var ctx = canvas.getContext('2d');
 ctx.beginPath();
@@ -59,7 +59,14 @@ ctx.fillStyle = 'green';
 ctx.fill();
 
 }
-		function er2(){
+x=Number(document.getElementById("x_znach").value); 
+y=Number(document.getElementById("y_znach").value); 
+if (x <= -2 && y>=1) {		
+document.getElementById("otvet").innerHTML = "Точка в области";
+} else {
+document.getElementById("otvet").innerHTML = "Точка не в области"; 
+}
+	function er2(){
 	var canvas = document.getElementById('example');
 var ctx = canvas.getContext('2d');
 ctx.beginPath();
@@ -73,7 +80,15 @@ ctx.fillStyle = 'green';
 ctx.fill();
 
 }
-		function er3(){
+x=Number(document.getElementById("x_znach").value); 
+y=Number(document.getElementById("y_znach").value); 
+if (y>=-2 && y<=1.5)	
+document.getElementById("otvet").innerHTML = "Точка в области";
+} else {
+document.getElementById("otvet").innerHTML = "Точка не в области"; 
+}
+				
+function er3(){
 	var canvas = document.getElementById('example');
 var ctx = canvas.getContext('2d');
 ctx.beginPath();
@@ -87,7 +102,15 @@ ctx.fillStyle = 'green';
 ctx.fill();
 
 }
-		function er4(){
+x=Number(document.getElementById("x_znach").value); 
+y=Number(document.getElementById("y_znach").value); 
+if (x>=1 && x<=2 && y<=4) 		
+document.getElementById("otvet").innerHTML = "Точка в области";
+} else {
+document.getElementById("otvet").innerHTML = "Точка не в области"; 
+}
+				
+function er4(){
 	var canvas = document.getElementById('example');
 var ctx = canvas.getContext('2d');
 ctx.beginPath();
@@ -101,7 +124,11 @@ ctx.fillStyle = 'green';
 ctx.fill();
 
 }
-    function er5(){
+x=Number(document.getElementById("x_znach").value); 
+y=Number(document.getElementById("y_znach").value); 
+		
+ 
+function er5(){
 	var canvas = document.getElementById('example');
 var ctx = canvas.getContext('2d');
 ctx.beginPath();
@@ -114,6 +141,9 @@ ctx.rect(330, 250, 300, 240);
 ctx.fillStyle = 'green';
 ctx.fill();
 }
+x=Number(document.getElementById("x_znach").value); 
+y=Number(document.getElementById("y_znach").value); 
+		
     function er6(){
 	var canvas = document.getElementById('example');
 var ctx = canvas.getContext('2d');
@@ -130,6 +160,9 @@ ctx.rect(340, 255, 300, 225);
 ctx.fillStyle = 'green';
 ctx.fill();
 }
+x=Number(document.getElementById("x_znach").value); 
+y=Number(document.getElementById("y_znach").value); 
+		
 	  function er7(){
 	var canvas = document.getElementById('example');
 var ctx = canvas.getContext('2d');
@@ -144,6 +177,9 @@ ctx.fillStyle = 'green';
 ctx.fill();
 
 }
+x=Number(document.getElementById("x_znach").value); 
+y=Number(document.getElementById("y_znach").value); 
+		
 	  function er8(){
 	var canvas = document.getElementById('example');
 var ctx = canvas.getContext('2d');
