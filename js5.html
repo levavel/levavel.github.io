@@ -135,7 +135,7 @@ ctx.lineTo(640, 240);
 ctx.stroke();
 ctx.strokeRect(330, 250, 300, 240);
 	
-	if (x>=2 && y>=0 \\  x>=1  && y>= -1 ) {
+	if (x>=2 && y>=0 ||  x>=1  && y>= -1 ) {
 document.getElementById("otvet").innerHTML = "Точка в области";
 } else {
 document.getElementById("otvet").innerHTML = "Точка не в области"; 
@@ -155,7 +155,7 @@ ctx.lineTo(640, 240);
 ctx.stroke();
 ctx.strokeRect(340, 0, 300, 230);
 ctx.strokeRect(340, 255, 300, 225);
-if (x>=2 && y>=1  \\ x>=2  &&  y<= -1.5 ) {
+if (x>=2 && y>=1  || x>=2  &&  y<= -1.5 ) {
 document.getElementById("otvet").innerHTML = "Точка в области";
 } else {
 document.getElementById("otvet").innerHTML = "Точка не в области"; 
@@ -196,7 +196,7 @@ ctx.lineTo(640, 240);
 ctx.stroke();
 ctx.strokeRect(0, 225, 640, 10);
 ctx.strokeRect(340, 0, 300,480);
-if (x<=2   && y>=0.5   &&  y<=1.5 \\ x>=2   )  {
+if (x<=2   && y>=0.5   &&  y<=1.5 || x>=2   )  {
 document.getElementById("otvet").innerHTML = "Точка в области";
 } else {
 document.getElementById("otvet").innerHTML = "Точка не в области"; 
