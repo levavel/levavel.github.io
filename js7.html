@@ -40,47 +40,65 @@ ctx.fillRect(0, 0, 640, 480);
 ctx.closePath(); 
 } 
 function er1(){ 
-  clean()
-  var x=Number(document.getElementById("x_znach").value); 
-  var y=Number(document.getElementById("y_znach").value); 
-  var canvas = document.getElementById('example');
-var ctx=canvas.getContext("2d");
-var R=Math.sqrt(x / Math.PI)
-var D=Math.sqrt(y*2)
+  clean();
+var canvas = document.getElementById('example'); 
+var ctx = canvas.getContext('2d'); 
 ctx.beginPath();
-ctx.moveTo(320, 0); 
-ctx.lineTo(320, 480); 
-ctx.moveTo(0, 240); 
-ctx.lineTo(640, 240); 
-ctx.arc(320, 240, R, 0, 2 * Math.PI)
-ctx.moveTo(320, 240); 
-ctx.moveTo(320-Math.sqrt(y)/2,240-Math.sqrt(y)/2)
-ctx.lineTo(320+Math.sqrt(y)/2,240-Math.sqrt(y)/2)
-ctx.lineTo(320+Math.sqrt(y)/2,240+Math.sqrt(y)/2)
-ctx.lineTo(320-Math.sqrt(y)/2,240+Math.sqrt(y)/2)
-ctx.lineTo(320-Math.sqrt(y)/2,240-Math.sqrt(y)/2)
-ctx.stroke(); 
-if ((2*R>D)) {
-document.getElementById("otvet").innerHTML = "квадрат в круге";
-} else {if (2*R<Math.sqrt(y)) {
-document.getElementById("otvet").innerHTML = "круг в квадрате";
+drawpoint1();
+drawpoint2();
+
+ctx.stroke();
+x=Number(document.getElementById("x_znach").value); 
+y=Number(document.getElementById("y_znach").value);
+var b=Math.sqrt(x);
+var R=Math.sqrt(y/Math.PI);
+var D=Math.sqrt(2*b*b);
+if (R<b/2) {
+ document.getElementById("otvet").innerHTML = "круг в квадрате"; 
 } else {
-document.getElementById("otvet").innerHTML = "пересечениее"; 
+  if (R*2>D) {
+document.getElementById("otvet").innerHTML = "квадрат в круге"; 
+} else {
+document.getElementById("otvet").innerHTML = "пересечение"; 
+}
+}
 }
 
+function drawpoint1() { 
+x=Number(document.getElementById("x_znach").value); 
+x=240+x*100; 
+var b=Math.sqrt(x);
+var canvas = document.getElementById('example'); 
+var ctx = canvas.getContext('2d'); 
+ctx.beginPath(); 
+ctx.strokeStyle = 'green'; 
+ctx.moveTo(320-b/2, 240-b/2);
+ctx.lineTo(320+b/2, 240-b/2);
+ctx.lineTo(320+b/2, 240+b/2);
+ctx.lineTo(320-b/2, 240+b/2);
+ctx.closePath();
+ctx.stroke(); 
+}
+function drawpoint2() { 
+y=Number(document.getElementById("y_znach").value);
+y=160+y*100;
+var canvas = document.getElementById('example'); 
+var ctx = canvas.getContext('2d'); 
+ctx.beginPath(); 
+ctx.strokeStyle = 'green'; 
+ctx.arc(320, 240, Math.sqrt(y/Math.PI), 0 ,2 * Math.PI) 
+ctx.stroke();
+}
 </script> 
 </head> 
 <body> 
-x=<input type="text" value="0" id="x_znach"> 
-y=<input type="text" value="0" id="y_znach"> 
+kvadrat <input type="text" value="0" id="x_znach">
+krug <input type="text" value="0" id="y_znach">
 <a href="#" onclick="clean()" class="button purple">delete</a> 
 <a href="#" onclick="er1()" class="button purple">knopka</a> 
 
-<br> 
 <canvas width='640' height='480' id='example'>Обновите браузер</canvas> 
-<br> 
-
 <div id="otvet"></div>
+<br> 
 </body> 
-
 </html>
