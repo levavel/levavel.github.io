@@ -5,7 +5,7 @@
   <script>
     function func1() {
       n = Number(document.getElementById("n_f1_znach").value);
-      var i =0 ;
+      var i = 0;
       while (i < n) {
         document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML + i + " ";
         i++;
@@ -14,7 +14,7 @@
 
     function func2() {
       n = Number(document.getElementById("n_f2_znach").value);
-      var i = 20;
+      var i = 0;
       do {
         document.getElementById("otvet2").innerHTML = document.getElementById("otvet2").innerHTML + i + " ";
         i++;
@@ -35,8 +35,8 @@
 <body>
 
 
-  <h1>Цикл while</h1> n=
-  <input type="text" value="20" id="n_f1_znach">
+  <h1>Цикл while!</h1> n=
+  <input type="text" value="6" id="n_f1_znach">
   <a href="#" onclick="func1()" class="button red text-blanco text-shadow-negra">♥</a>
   <div id="otvet1"></div>
 <br>
@@ -44,7 +44,7 @@
   <br>
   <br>
   <h1>Цикл Do while</h1> n=
-  <input type="text" value="36" id="n_f2_znach">
+  <input type="text" value="6" id="n_f2_znach">
   <a href="#" onclick="func2()" class="button yellow text-blanco text-shadow-negra">(a</a>
   <div id="otvet2"></div>
 <br>
