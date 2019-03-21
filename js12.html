@@ -1,0 +1,84 @@
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="style2">
+  <script>
+    function func1() {
+      n = Number(document.getElementById("n_f1_znach").value);
+      var i = 20;
+      while (i < 36) {
+        document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML  + i + "<br>";
+        i++ ;
+      }
+    }
+    function func2() {
+      n = Number(document.getElementById("n_f2_znach").value);
+      var i = 10;
+      do {
+        document.getElementById("otvet2").innerHTML = document.getElementById("otvet2").innerHTML +i*i+ "<br>";
+        i++;
+      } while (i < n);
+    }
+    function func3() {
+      n = Number(document.getElementById("n_f3_znach").value);
+      var n;
+      for ( n = n ; n < 50; n++) {
+        document.getElementById("otvet3").innerHTML = document.getElementById("otvet3").innerHTML + n*n*n + "<br>";
+      }
+    }
+function func4() {
+
+      n = Number(document.getElementById("n_f4_znach").value);
+      m = Number(document.getElementById("n_f5_znach").value);
+      var i = n;
+      while (i <= m) {
+        document.getElementById("otvet5").innerHTML = document.getElementById("otvet5").innerHTML + i + " <br>";
+        i++;
+      }
+    }
+
+
+  </script>
+</head>
+
+<body>
+
+
+  <h1>Цикл while!</h1> n=
+  <input type="text" value="0" id="n_f1_znach">
+  <a href="#" onclick="func1()" class="button red text-blanco text-shadow-negra">(a</a>
+  <div id="otvet1"></div>
+<br>
+  <br>
+  <br>
+  <br>
+  <h1>Цикл Do while</h1> n=
+  <input type="text" value="0" id="n_f2_znach">
+  <a href="#" onclick="func2()" class="button yellow text-blanco text-shadow-negra">(b</a>
+  <div id="otvet2"></div>
+<br>
+  <br>
+  <br>
+  <br>
+  <h1>Цикл for</h1> n=
+  <input type="text" value="0" id="n_f3_znach">
+  <a href="#" onclick="func3()" class="button green text-blanco text-shadow-negra">(v</a>
+  <div id="otvet3"></div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1>Цикл for</h1> 
+ n= <input type="text" value="0" id="n_f4_znach">
+ m= <input type="text" value="0" id="n_f5_znach">
+  <a href="#" onclick="func4()" class="button red text-blanco text-shadow-negra">(g</a>
+
+  <div id="otvet5"></div>
+
+<br>
+  <br>
+  <br>
+  <br>
+</body>
+</html>
