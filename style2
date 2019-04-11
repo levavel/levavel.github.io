@@ -122,4 +122,4 @@ html, body {
 	border-image-slice: 23 34 23 44;
 	border-image-width: auto auto 0 auto;
 	border-image-outset: 5px 0px 0px 2px;
-	border-image-repeat: stretch;
+	border-image-repeat: stretch; 
