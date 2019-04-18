@@ -1,0 +1,34 @@
+
+<html>
+<head>
+  <link rel="stylesheet" href="style2.css">
+  <script>
+         
+         function func1() {
+      n = Number(document.getElementById("n_f1_znach").value);
+      var i = n;
+     
+      var S=0;
+      while (i <= 2*n) {
+        
+        S=S+i*i;
+        document.getElementById("otvet1").innerHTML = document.getElementById("otvet1").innerHTML + i*i +" "+ S + "<br>";
+       
+        i++;
+      } 
+   
+    }
+    
+     </script>
+</head>
+
+<body>
+
+    a= <input type="text" value="0" id="n_f1_znach">
+<a href="#" onclick="func1()" class="action-button shadow animate blue"> knopka </a>
+  <div id="otvet1"></div>
+  <br>
+  <br>
+  <br>
+</body>
+</html>
